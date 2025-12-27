@@ -20,6 +20,9 @@ class _ChatScreenState extends State<ChatScreen> {
   void _handleSubmitted(String text) {
     _textController.clear();
     if (text.isNotEmpty) {
+      // Log the sent message to the console
+      debugPrint('Message sent: $text');
+      
       setState(() {
         _messages.add({'sender': 'me', 'text': text});
       });
